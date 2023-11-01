@@ -1,0 +1,56 @@
+#tooltip {
+  display: none;
+  width: max-content;
+  max-width: calc(100vw - 25px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #222;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 90%;
+  opacity: 0;
+}
+
+#arrow {
+  position: absolute;
+  background: #222;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: .2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: .2s;
+  animation-fill-mode: both;
+}
